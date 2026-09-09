@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Drift</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">ARCADE // 01</p>
+          <h1>NEON <span>DRIFT</span></h1>
+        </div>
+        <div class="stats" aria-live="polite">
+          <div><span>SCORE</span><strong id="score">0000</strong></div>
+          <div><span>BEST</span><strong id="best">0000</strong></div>
+        </div>
+        <button class="share-btn" id="share-btn" aria-label="Share Neon Drift">SHARE ↗</button>
+      </header>
+
+      <section class="stage-wrap">
+        <canvas id="game" aria-label="Neon Drift game area"></canvas>
+        <div class="overlay" id="overlay">
+          <p class="eyebrow" id="overlay-kicker">READY?</p>
+          <h2 id="overlay-title">DRIFT<br /><span>BEYOND</span></h2>
+          <p id="overlay-copy">Collect the golden sparks.<br />Dodge the red comets.</p>
+          <button id="start-btn">START RUN <span>→</span></button>
+        </div>
+      </section>
+
+      <footer class="controls">
+        <p><kbd>WASD</kbd> or <kbd>←↑↓→</kbd> to move</p>
+        <p class="hint">Survive as long as you can</p>
+        <p class="share-status" id="share-status" role="status" aria-live="polite"></p>
+        <div class="touch-controls" aria-label="Touch controls">
+          <button data-key="ArrowUp" aria-label="Move up">▲</button>
+          <div><button data-key="ArrowLeft" aria-label="Move left">◀</button><button data-key="ArrowDown" aria-label="Move down">▼</button><button data-key="ArrowRight" aria-label="Move right">▶</button></div>
+        </div>
+      </footer>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
